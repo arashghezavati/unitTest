@@ -14,7 +14,7 @@ const { Todo } = require('./models/Todo.js');
 //post a to do
 app.post('/todolist', (req, res) => {
 	let todo = new Todo(req.body);
-	todo.save((error) => {
+	todo.save((error) =>{
 		if (error){
 			res.status(500).json(error);
 			return;
